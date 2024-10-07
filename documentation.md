@@ -5,7 +5,7 @@ author: Ian Cornelius
 date: October 7 2024
 ---
 
-\newfontfamily\myfont{Ubuntu}
+\newfontfamily\myfont{GFS Porson}
 \newcommand{\myalpha}{\begingroup\myfontα \endgroup}
 \newcommand{\mybeta}{\begingroup\myfontβ \endgroup}
 \newpage

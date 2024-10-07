@@ -21,11 +21,14 @@ jobs:
         uses: r-lib/actions/setup-pandoc@v2
       - name: Install XeLaTeX
         run: sudo apt-get install -y texlive-xetex
-      - name: Download and install mainfont
+      - name: Download and install fonts
         run: |
           wget -O Junicode.zip https://github.com/psb1558/Junicode-font/releases/download/v2.209/Junicode_2.209.zip
           unzip Junicode.zip
           mv Junicode/ /usr/share/fonts
+          wget https://mirrors.ctan.org/fonts/greek/gfs/gfsporson.zip
+          unzip gfsporson.zip
+          mv gfsporson/ /usr/share/fonts
           fc-cache -fv
       - name: Verify dependencies
         run: |
