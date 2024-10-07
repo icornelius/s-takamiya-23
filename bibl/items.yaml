@@ -1,0 +1,228 @@
+---
+references:
+- id: BurrowPiersPlowmanBversion2018
+  citation-key: BurrowPiersPlowmanBversion2018
+  collection-number: '1'
+  collection-title: PPEA Print Series
+  edition: XML version 2.0
+  editor:
+    - family: Burrow
+      given: John A.
+    - family: Turville-Petre
+      given: Thorlac
+  event-place: Raleigh, NC
+  ISBN: 978-1-941331-15-6
+  issued:
+    - year: 2018
+  language: en
+  note: 'OCLC: 1043649023'
+  publisher: The Society for Early English and Norse Electronic Texts
+  publisher-place: Raleigh, NC
+  source: Open WorldCat
+  title: 'Piers Plowman: the B-version archetype (Bx)'
+  title-short: B-version archetype
+  type: book
+
+- id: CorneliusTakamiyaMS232023
+  author:
+    - family: Cornelius
+      given: Ian
+    - family: Ensley
+      given: J. Eric
+  citation-key: CorneliusTakamiyaMS232023
+  container-title: The Journal of the Early Book Society
+  container-title-short: JEBS
+  ISSN: 1525-6790
+  issued:
+    - year: 2023
+  language: en
+  license: All rights reserved
+  page: 71-91
+  title: >-
+    Takamiya MS 23, its exemplar, and the <span class="nocase">*editio
+    princeps*</span> of *Piers Plowman*
+  title-short: Takamiya MS 23
+  type: article-journal
+  volume: '26'
+
+- id: DawsonElizabethanHandwriting150016501966
+  author:
+    - family: Dawson
+      given: Giles E.
+    - family: Kennedy-Skipton
+      given: Laetitia
+  call-number: 652.1 D272
+  citation-key: DawsonElizabethanHandwriting150016501966
+  event-place: New York
+  issued:
+    - year: 1966
+  language: en
+  number-of-pages: ix+130
+  publisher: Norton
+  publisher-place: New York
+  source: loyola-primo.com
+  title: 'Elizabethan handwriting, 1500-1650: a manual'
+  title-short: Elizabethan handwriting
+  type: book
+
+- id: DugganPiersPlowmanElectronic2014a
+  accessed:
+    - year: 2023
+      month: 7
+      day: 17
+  citation-key: DugganPiersPlowmanElectronic2014a
+  collection-editor:
+    - family: Duggan
+      given: Hoyt N.
+  collection-number: 1, 2, 5, 6, 7, 9, 10, 11
+  collection-title: The Society for Early English and Norse Electronic Texts, Series A
+  edition: web ed.
+  editor:
+    - family: Duggan
+      given: Hoyt N.
+    - family: Adams
+      given: Robert
+    - family: Calabrese
+      given: Michael
+    - family: Eliason
+      given: Eric
+    - family: Hanna
+      given: Ralph
+    - family: Heinrichs
+      given: Katherine
+    - family: Jefferson
+      given: Judith
+    - family: Price-Wilkin
+      given: John
+    - family: Turville-Petre
+      given: Thorlac
+  issued:
+    - year: 2014
+  language: en
+  original-date:
+    - year: 2000
+    - year: 2014
+  original-publisher: University of Michigan Press & D. S. Brewer
+  original-publisher-place: Ann Arbor & Woodbridge, Suffolk
+  publisher: The Society for Early English and Norse Electronic Texts
+  title: The Piers Plowman Electronic Archive
+  type: book
+  URL: http://piers.chass.ncsu.edu/
+  volume: 1-8
+
+- id: JeffersonPiersPlowmanElectronic2014
+  accessed:
+    - year: 2024
+      month: 6
+      day: 30
+  citation-key: JeffersonPiersPlowmanElectronic2014
+  collection-number: '11'
+  collection-title: SEENET Series A
+  editor:
+    - family: Jefferson
+      given: Judith
+  ISBN: 978-1-941331-11-8
+  issued:
+    - year: 2014
+  language: en
+  publisher: The Society for Early English and Norse Electronic Texts
+  title: >-
+    The Piers Plowman Electronic Archive, vol. 8: Cambridge, Cambridge
+    University Library, MS Gg.4.31 (G)
+  title-short: Cambridge University Library, MS Gg.4.31
+  type: book
+  URL: https://piers.chass.ncsu.edu/texts/G
+
+- id: KanePiersPlowmanBVersion1988
+  citation-key: KanePiersPlowmanBVersion1988
+  collection-editor:
+    - family: Kane
+      given: George
+  collection-title: 'Piers Plowman: the three versions'
+  edition: rev. ed.
+  editor:
+    - family: Kane
+      given: George
+    - family: Donaldson
+      given: E. Talbot
+  event-place: London and Berkeley
+  issued:
+    - year: 1988
+  language: en
+  number-of-pages: vii, 681 pp.
+  publisher: Athlone Press and University of California Press
+  publisher-place: London and Berkeley
+  source: EBSCOhost
+  title: >-
+    Piers Plowman: the B version. Will's visions of Piers Plowman, Do-Well,
+    Do-Better and Do-Best. An edition in the form of Trinity College Cambridge
+    MS B.15.17, corrected and restored from the known evidence, with variant
+    readings
+  title-short: 'Piers Plowman: B version'
+  type: book
+
+- id: ParkesEnglishCursiveBook1969
+  author:
+    - family: Parkes
+      given: M. B.
+  call-number: Z115 E5 P37 1980 (LC)+ Oversize
+  citation-key: ParkesEnglishCursiveBook1969
+  event-place: Oxford
+  ISBN: 0-520-04080-5
+  issued:
+    - year: 1969
+  publisher: Oxford University Press
+  publisher-place: Oxford
+  source: orbis.library.yale.edu Library Catalog
+  title: English cursive book hands, 1250–1500
+  type: book
+
+- id: ParkesPauseEffectIntroduction1993
+  author:
+    - family: Parkes
+      given: M. B.
+  call-number: P301.5.P86 P37 1992
+  citation-key: ParkesPauseEffectIntroduction1993
+  event-place: Berkeley
+  ISBN: 0-520-07941-8
+  issued:
+    - year: 1993
+  language: en
+  number-of-pages: '327'
+  publisher: University of California Press
+  publisher-place: Berkeley
+  source: www.franklin.library.upenn.edu Library Catalog
+  title: Pause and effect. An introduction to the history of punctuation in the West
+  title-short: Pause and Effect
+  type: book
+
+- id: PettiEnglishLiteraryHands1977
+  author:
+    - family: Petti
+      given: Anthony G.
+  call-number: Z115.E5 P47
+  citation-key: PettiEnglishLiteraryHands1977
+  event-place: Cambridge, MA
+  ISBN: 978-0-674-25666-8
+  issued:
+    - year: 1977
+  language: en
+  number-of-pages: ix+133
+  publisher: Harvard University Press
+  publisher-place: Cambridge, MA
+  source: loyola-primo.com
+  title: English literary hands from Chaucer to Dryden
+  type: book
+
+- id: TEIConsortiumTEIP5Guidelines2024
+  citation-key: TEIConsortiumTEIP5Guidelines2024
+  edition: Version 4.8.0. Last updated on 2nd September 2024
+  editor:
+    - literal: TEI Consortium
+  issued:
+    - year: 2024
+  title: 'TEI P5: Guidelines for Electronic Text Encoding and Interchange'
+  title-short: TEI P5
+  type: book
+  URL: http://www.tei-c.org/Guidelines/P5/
+...

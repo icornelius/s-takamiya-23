@@ -1,0 +1,11 @@
+---
+mainfont: Junicode
+fontsize: 12pt
+geometry: margin=1in
+link-citations: True
+colorlinks: true
+linkcolor: blue
+secnumdepth: 3
+toc: True
+bibliography: bibl/items.yaml
+---
