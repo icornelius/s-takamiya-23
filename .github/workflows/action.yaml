@@ -1,4 +1,4 @@
-name: Deploy handbook
+name: Build documentation and release
 
 on:
   push:
@@ -34,7 +34,6 @@ jobs:
         run: |
           pandoc --version
           xetex --version
-          ls Junicode*
       - name: Build
         run: >-
           pandoc
@@ -52,4 +51,3 @@ jobs:
         with:
           files: |
             documentation.pdf
-            transcription-takamiya-23.xml
