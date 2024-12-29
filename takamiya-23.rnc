@@ -1,0 +1,151 @@
+# This Relax NG compact schema is intended as a narrow specification of the
+# syntax of the present state of the XML file 'transcription-takamiya-23.xml'.
+
+default namespace = "http://www.tei-c.org/ns/1.0"
+start = element TEI { teiheader, teitext }
+
+# Some repeated attributes
+
+att.n = attribute n { text }
+att.xmlid = attribute xml:id { xsd:ID }
+
+# Elements and their attributes are defined in approximate order of
+# appearance
+
+teiheader = element teiHeader { att.headertype, filedesc, profiledesc }
+att.headertype = attribute type { "text" }
+teitext = element text { att.xmlid, body }
+
+filedesc = element fileDesc { titlestmt, editionstmt, publicationstmt, sourcedesc }
+profiledesc = element profileDesc { langusage, handlist }
+
+# children of fileDesc
+
+titlestmt = element titleStmt { work_title, principal, respstmt* }
+work_title = element title { text }
+principal = element principal { resp_name }
+respstmt = element respStmt { resp_name, resp }
+resp_name = element name { text }
+resp = element resp { text }
+
+editionstmt = element editionStmt { ed_title }
+ed_title = element title { att.n, text }
+
+publicationstmt = element publicationStmt { date, distributor+, availability }
+date = element date { text }
+distributor = element distributor { att.corresp, text }
+att.corresp = attribute corresp { xsd:anyURI }
+availability = element availability { license }
+license = element license { att.target, text }
+att.target = attribute target { xsd:anyURI }
+
+sourcedesc = element sourceDesc { paragraph, msdesc }
+paragraph = element p { text }
+msdesc = element msDesc { msidentifier, additional }
+msidentifier = element msIdentifier { settlement, repository, idno }
+settlement = element settlement { text }
+repository = element repository { text }
+idno = element idno { text }
+additional = element additional { surrogates }
+surrogates = element surrogates { bibl }
+bibl = element bibl { att.corresp, text }
+
+# NOTE: These section may be suppressed from the XML
+
+# editorialdecl = element editorialDecl { p }
+# list_p = element list { head, item+ }
+# head = element head { text }
+# item = element item { label, term }
+# label = element label { text }
+# term = element term { text }
+
+# children of profileDesc
+
+langusage = element langUsage { language+ }
+language = element language { att.ident, text }
+att.ident = attribute ident { "en" | "fr" | "la" }
+handlist = element handList { hand }
+hand = element hand { att.handid, empty }
+att.handid = attribute id { text }
+
+# BODY
+#
+# STRUCTURING ELEMENTS
+
+body = element body { div1+ }
+div1 = element div1 { att.n, att.div_type, att.org, att.sample, milestone_doc?, milestone_text, div_head, ( line+ | marginalia* | formework* | milestone_doc+ ) }
+att.div_type = attribute type { "passus" }
+att.org = attribute org { "uniform" }
+att.sample = attribute sample { "complete" }
+milestone_doc = element milestone { att.doc_unit, att.n , empty }
+att.doc_unit = attribute unit { "fol." }
+milestone_text = element milestone { att.n, att.text_unit, empty }
+att.text_unit = attribute unit { "PassusB" }
+
+linebreak = element lb { empty }
+
+# TRANSCRIPTION CONTAINERS
+
+div_head = element head { text | foreign | hi | ( text | foreign)+ }
+
+# The remaining transcription containers are divided into two groups: First,
+# the three most frequent and complex (hi, foreign, and l) , then the rest.
+#
+# NOTE: regularize nesting of hi and foreign in the XML? (see div_head, hi,
+# foreign) Elements with complex grammar, appearing at multiple points in the
+# tree
+
+hi = element hi { att.rend, ( damage | foreign | hi | mixed { ( del | expan | hi | linebreak | seg )* } ) }
+att.rend = attribute rend { "ul" | "displayScript" | "tx" | "boxed" }
+# NOTE: I have seen two syntaxes for recording mixed content.  The first
+# (above) is modeled on TEI Guidelines, the second (commented out, below) on
+# https://homepage.divms.uiowa.edu/~slonnegr/xml/07.RelaxNG.pdf
+#
+# hi = element hi { att.rend, ( text | damage | foreign | hi | ( text | expan | hi | linebreak | seg )+ ) }
+
+foreign = element foreign { att.xml_lang, ( hi | mixed { ( choice | expan | hi | linebreak | sic )* } ) }
+att.xml_lang = attribute xml:lang { "LAT" | "FRE" }
+
+line = element l { att.xmlid, att.n, att.n_Bx, ( foreign | hi | mixed { ( add | choice | damage | del | expan | foreign | hi | linebreak | sic | seg | unclear )* } ) }
+att.n_Bx = attribute n_Bx { text }
+# NOTE: alternative grammar for mixed content of line:
+#
+# line = element l { att.xmlid, att.n, att.n_Bx, ( text | foreign | hi | ( text | add | choice | damage | del | expan | foreign | hi | linebreak | sic | seg | unclear )+ ) }
+
+
+# Other transcription containers and their attributes, in alpha order
+
+abbrev = element abbrev { text }
+
+add = element add { att.add_loc, text }
+att.add_loc = attribute location { "inline" | "supralinear" }
+
+choice = element choice { abbrev, expan }
+
+damage = element damage { att.damage_type, ( text | ( text | del | unclear )+ ) }
+att.damage_type = attribute type { "cropped" }
+
+expan = element expan { text }
+
+del = element del { att.del_rend, att.hand?, ( hi | unclear | mixed { expan* } ) }
+att.del_rend = attribute rend { "blotted" | "linedThrough" | "overwritten" | "razedOut" }
+att.hand = attribute hand { text }
+
+formework = element fw { att.fw_type, att.place, ( text | damage ) }
+att.fw_type = attribute type { "sig" }
+att.place = attribute place { text }
+att.unit = attribute unit { text }
+
+seg = element seg { att.seg_type, "-" }
+att.seg_type = attribute type { "shadowHyphen" }
+
+sic = element sic { text }
+
+unclear = element unclear { text }
+
+
+# Marginalia, an empty element (in this version we only flag the existence of
+# marginalia)
+
+marginalia = element marginalia { att.place, att.hand?, att.marginalium_id, empty }
+att.marginalium_id = attribute id { text }

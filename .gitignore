@@ -1,2 +1,5 @@
 temp.*
 *.pdf
+
+# output of validation
+errors.txt

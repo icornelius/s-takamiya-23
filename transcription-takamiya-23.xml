@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-stylesheet type="text/css" href="stylesheets/Diplomatic.css"?>
-<?oxygen RNGSchema="allitSeenet.rnc" type="compact"?>
+<?xml-model href="takamiya-23.rnc" title="Schema for transcription of Takamiya 23" ?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader type="text">
         <fileDesc>
@@ -28,6 +27,7 @@
             <publicationStmt>
                 <date>2024</date>
 		<distributor corresp="https://github.com/icornelius/s-takamiya-23/">GitHub</distributor>
+		<distributor corresp="https://zenodo.org/records/13955352">Zenodo</distributor>
                 <availability>
                     <license target="https://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International license</license>
                 </availability>
@@ -48,9 +48,8 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+	<!--
         <encodingDesc>
-            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="CHAR.xml" xpointer="CHAR-data"/>
-            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="REND.xml" xpointer="REND-data"/>
             <editorialDecl>
                 <p>
                     <list>
@@ -67,6 +66,7 @@
                 </p>
             </editorialDecl>
         </encodingDesc>
+	-->
         <profileDesc>
             <langUsage>
                 <language ident="en">English </language>
@@ -252,7 +252,7 @@
             <div1 type="passus" n="S.1" org="uniform" sample="complete">
                 <milestone n="1" unit="PassusB"/>
                 <head><foreign xml:lang="LAT"><hi rend="displayScript">Passus p<expan>ri</expan>m<expan>us</expan> de visione</hi></foreign></head>
-                <l xml:id="S.1.1" n="KD.1.1" n_Bx="Bx.1.1"><hi rend="#displayScript">What</hi> this Mounteyne / menith and this darke dale</l>
+                <l xml:id="S.1.1" n="KD.1.1" n_Bx="Bx.1.1"><hi rend="displayScript">What</hi> this Mounteyne / menith and this darke dale</l>
                 <l xml:id="S.1.2" n="KD.1.2" n_Bx="Bx.1.2">And the feilde full of folke / I shall you feyr shewe</l>
                 <l xml:id="S.1.3" n="KD.1.3" n_Bx="Bx.1.3">A louelie Ladie of lere / in lynen clothed</l>
                 <l xml:id="S.1.4" n="KD.1.4" n_Bx="Bx.1.4">Cam doune from a castell / and callid me faire</l>
