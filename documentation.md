@@ -2,7 +2,7 @@
 title: Technical Introduction
 subtitle: For the Provisional Transcription of the *Piers Plowman* Text in Takamiya MS 23
 author: Ian Cornelius
-date: October 7 2024
+date: \today
 ---
 
 \newfontfamily\myfont{GFS Porson}
@@ -13,7 +13,7 @@ date: October 7 2024
 # Summary overview
 
 The XML file `transcription-takamiya-23.xml` contains a provisional transcription of the text of *Piers Plowman* as transmitted in New Haven, Beinecke Library, Takamiya MS 23 (*olim* London, Sion College, MS Arc. L.40. 2/E), designated sigil 'S' in the textual scholarship.
-For description of the manuscript and its text, see @CorneliusTakamiyaMS232023, with references.
+For description of the manuscript and its text, see @CorneliusTakamiyaMS232023 and @CorneliusProtestantElementsPiers2024, with references.
 This document serves as a technical introduction to the transcription file and policies that inform it.
 
 The transcription agrees approximately with *TEI P5 Guidelines for Electronic Text Encoding and Interchange* and the conventions of published documentary editions of *The Piers Plowman Electronic Archive* (*PPEA*).

@@ -23,6 +23,29 @@ references:
   title-short: B-version archetype
   type: book
 
+- id: CorneliusProtestantElementsPiers2024
+  author:
+    - family: Cornelius
+      given: Ian
+    - family: Ensley
+      given: J. Eric
+  citation-key: CorneliusProtestantElementsPiers2024
+  container-title: The Review of English Studies
+  container-title-short: RES
+  DOI: 10.1093/res/hgae069
+  ISSN: 1471-6968
+  issued:
+    - year: 2024
+      month: 11
+      day: 26
+  language: en
+  title: >-
+    Protestant elements in the *Piers Plowman* texts of Robert Crowley and
+    Takamiya MS 23
+  title-short: Protestant elements in *Piers Plowman* texts
+  type: article-journal
+  volume: hgae069
+
 - id: CorneliusTakamiyaMS232023
   author:
     - family: Cornelius
@@ -38,9 +61,7 @@ references:
   language: en
   license: All rights reserved
   page: 71-91
-  title: >-
-    Takamiya MS 23, its exemplar, and the <span class="nocase">*editio
-    princeps*</span> of *Piers Plowman*
+  title: Takamiya MS 23, its exemplar, and the *editio princeps* of *Piers Plowman*
   title-short: Takamiya MS 23
   type: article-journal
   volume: '26'
@@ -113,8 +134,8 @@ references:
 - id: JeffersonPiersPlowmanElectronic2014
   accessed:
     - year: 2024
-      month: 6
-      day: 30
+      month: 10
+      day: 19
   citation-key: JeffersonPiersPlowmanElectronic2014
   collection-number: '11'
   collection-title: SEENET Series A
