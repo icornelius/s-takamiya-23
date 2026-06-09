@@ -10,7 +10,6 @@ references:
       given: John A.
     - family: Turville-Petre
       given: Thorlac
-  event-place: Raleigh, NC
   ISBN: 978-1-941331-15-6
   issued:
     - year: 2018
@@ -23,28 +22,29 @@ references:
   title-short: B-version archetype
   type: book
 
-- id: CorneliusProtestantElementsPiers2024
+- id: CorneliusProtestantElementsPiers2025
   author:
     - family: Cornelius
       given: Ian
     - family: Ensley
       given: J. Eric
-  citation-key: CorneliusProtestantElementsPiers2024
+  citation-key: CorneliusProtestantElementsPiers2025
   container-title: The Review of English Studies
   container-title-short: RES
   DOI: 10.1093/res/hgae069
   ISSN: 1471-6968
+  issue: '323'
   issued:
-    - year: 2024
-      month: 11
-      day: 26
+    - year: 2025
+      month: 2
   language: en
+  page: 1–14
   title: >-
     Protestant elements in the *Piers Plowman* texts of Robert Crowley and
     Takamiya MS 23
   title-short: Protestant elements in *Piers Plowman* texts
   type: article-journal
-  volume: hgae069
+  volume: '76'
 
 - id: CorneliusTakamiyaMS232023
   author:
@@ -60,7 +60,7 @@ references:
     - year: 2023
   language: en
   license: All rights reserved
-  page: 71-91
+  page: 71–91
   title: Takamiya MS 23, its exemplar, and the *editio princeps* of *Piers Plowman*
   title-short: Takamiya MS 23
   type: article-journal
@@ -74,7 +74,6 @@ references:
       given: Laetitia
   call-number: 652.1 D272
   citation-key: DawsonElizabethanHandwriting150016501966
-  event-place: New York
   issued:
     - year: 1966
   language: en
@@ -82,7 +81,7 @@ references:
   publisher: Norton
   publisher-place: New York
   source: loyola-primo.com
-  title: 'Elizabethan handwriting, 1500-1650: a manual'
+  title: 'Elizabethan handwriting, 1500–1650: a manual'
   title-short: Elizabethan handwriting
   type: book
 
@@ -129,7 +128,7 @@ references:
   title: The Piers Plowman Electronic Archive
   type: book
   URL: http://piers.chass.ncsu.edu/
-  volume: 1-8
+  volume: 1–8
 
 - id: JeffersonPiersPlowmanElectronic2014
   accessed:
@@ -166,11 +165,12 @@ references:
       given: George
     - family: Donaldson
       given: E. Talbot
-  event-place: London and Berkeley
   issued:
     - year: 1988
   language: en
   number-of-pages: vii, 681 pp.
+  original-date:
+    - year: 1975
   publisher: Athlone Press and University of California Press
   publisher-place: London and Berkeley
   source: EBSCOhost
@@ -188,7 +188,6 @@ references:
       given: M. B.
   call-number: Z115 E5 P37 1980 (LC)+ Oversize
   citation-key: ParkesEnglishCursiveBook1969
-  event-place: Oxford
   ISBN: 0-520-04080-5
   issued:
     - year: 1969
@@ -196,6 +195,7 @@ references:
   publisher-place: Oxford
   source: orbis.library.yale.edu Library Catalog
   title: English cursive book hands, 1250–1500
+  title-short: English cursive book hands
   type: book
 
 - id: ParkesPauseEffectIntroduction1993
@@ -204,7 +204,6 @@ references:
       given: M. B.
   call-number: P301.5.P86 P37 1992
   citation-key: ParkesPauseEffectIntroduction1993
-  event-place: Berkeley
   ISBN: 0-520-07941-8
   issued:
     - year: 1993
@@ -223,7 +222,6 @@ references:
       given: Anthony G.
   call-number: Z115.E5 P47
   citation-key: PettiEnglishLiteraryHands1977
-  event-place: Cambridge, MA
   ISBN: 978-0-674-25666-8
   issued:
     - year: 1977
@@ -242,7 +240,7 @@ references:
     - literal: TEI Consortium
   issued:
     - year: 2024
-  title: 'TEI P5: Guidelines for Electronic Text Encoding and Interchange'
+  title: 'TEI P5: guidelines for electronic text encoding and interchange'
   title-short: TEI P5
   type: book
   URL: http://www.tei-c.org/Guidelines/P5/
