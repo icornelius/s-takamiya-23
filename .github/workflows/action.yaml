@@ -12,7 +12,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Working directory check
         run: |
           pwd
@@ -22,7 +22,7 @@ jobs:
         with:
           pandoc-version: 'latest'
       - name: Install XeLaTeX
-        run: sudo apt-get install -y texlive-xetex
+        run: sudo apt-get update && sudo apt-get install -y texlive-xetex
       - name: Download and install fonts
         run: |
           wget -O Junicode.zip https://github.com/psb1558/Junicode-font/releases/download/v2.209/Junicode_2.209.zip
