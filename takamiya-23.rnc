@@ -73,7 +73,7 @@ att.handid = attribute id { text }
 # STRUCTURING ELEMENTS
 
 body = element body { div1+ }
-div1 = element div1 { att.n, att.div_type, att.org, att.sample, milestone_doc?, milestone_text, div_head, ( line+ | marginalia* | formework* | milestone_doc+ ) }
+div1 = element div1 { att.n, att.div_type, att.org, att.sample, milestone_doc?, milestone_text, div_head, ( line | marginalia | formework | milestone_doc | trailer )+ }
 att.div_type = attribute type { "passus" }
 att.org = attribute org { "uniform" }
 att.sample = attribute sample { "complete" }
@@ -95,43 +95,35 @@ div_head = element head { text | foreign | hi | ( text | foreign)+ }
 # foreign) Elements with complex grammar, appearing at multiple points in the
 # tree
 
-hi = element hi { att.rend, ( damage | foreign | hi | mixed { ( del | expan | hi | linebreak | seg )* } ) }
+hi = element hi { att.rend, ( text | add | choice | damage | del | expan | foreign | hi | linebreak | seg | sic )* }
 att.rend = attribute rend { "ul" | "displayScript" | "tx" | "boxed" }
-# NOTE: I have seen two syntaxes for recording mixed content.  The first
-# (above) is modeled on TEI Guidelines, the second (commented out, below) on
-# https://homepage.divms.uiowa.edu/~slonnegr/xml/07.RelaxNG.pdf
-#
-# hi = element hi { att.rend, ( text | damage | foreign | hi | ( text | expan | hi | linebreak | seg )+ ) }
 
-foreign = element foreign { att.xml_lang, ( hi | mixed { ( choice | expan | hi | linebreak | sic )* } ) }
+foreign = element foreign { att.xml_lang, ( text | add | choice | damage | del | expan | hi | linebreak | sic | unclear )* }
 att.xml_lang = attribute xml:lang { "LAT" | "FRE" }
 
-line = element l { att.xmlid, att.n, att.n_Bx, ( foreign | hi | mixed { ( add | choice | damage | del | expan | foreign | hi | linebreak | sic | seg | unclear )* } ) }
+line = element l { att.xmlid, att.n, att.n_Bx, ( text | add | choice | damage | del | expan | foreign | hi | linebreak | sic | seg | unclear )* }
 att.n_Bx = attribute n_Bx { text }
-# NOTE: alternative grammar for mixed content of line:
-#
-# line = element l { att.xmlid, att.n, att.n_Bx, ( text | foreign | hi | ( text | add | choice | damage | del | expan | foreign | hi | linebreak | sic | seg | unclear )+ ) }
 
 
 # Other transcription containers and their attributes, in alpha order
 
-abbrev = element abbrev { text }
+abbrev = element abbr { text }
 
-add = element add { att.add_loc, text }
-att.add_loc = attribute location { "inline" | "supralinear" }
+add = element add { att.add_loc, att.hand?, ( text | expan | unclear )* }
+att.add_loc = attribute place { "inline" | "supralinear" }
 
 choice = element choice { abbrev, expan }
 
-damage = element damage { att.damage_type, ( text | ( text | del | unclear )+ ) }
+damage = element damage { att.damage_type?, att.hand?, ( text | del | expan | unclear )* }
 att.damage_type = attribute type { "cropped" }
 
 expan = element expan { text }
 
-del = element del { att.del_rend, att.hand?, ( hi | unclear | mixed { expan* } ) }
+del = element del { att.del_rend, att.hand?, ( text | add | expan | hi | unclear )* }
 att.del_rend = attribute rend { "blotted" | "linedThrough" | "overwritten" | "razedOut" }
 att.hand = attribute hand { text }
 
-formework = element fw { att.fw_type, att.place, ( text | damage ) }
+formework = element fw { att.fw_type, att.place, ( text | damage )* }
 att.fw_type = attribute type { "sig" }
 att.place = attribute place { text }
 att.unit = attribute unit { text }
@@ -139,13 +131,17 @@ att.unit = attribute unit { text }
 seg = element seg { att.seg_type, "-" }
 att.seg_type = attribute type { "shadowHyphen" }
 
-sic = element sic { text }
+sic = element sic { ( text | expan )* }
 
-unclear = element unclear { text }
+unclear = element unclear { ( text | expan )* }
 
 
-# Marginalia, an empty element (in this version we only flag the existence of
-# marginalia)
+# Marginalia
 
-marginalia = element marginalia { att.place, att.hand?, att.marginalium_id, empty }
+marginalia = element marginalia { att.place, att.hand?, att.marginalium_id, att.marginalium_type?, ( text | hi)* }
 att.marginalium_id = attribute id { text }
+att.marginalium_type = attribute type { "pentrial" }
+
+# Trailer
+
+trailer = element trailer { ( text | foreign | hi )* }
