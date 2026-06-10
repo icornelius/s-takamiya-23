@@ -13,15 +13,12 @@ date: \today
 # Summary overview
 
 The XML file `transcription-takamiya-23.xml` contains a provisional transcription of the text of *Piers Plowman* as transmitted in New Haven, Beinecke Library, Takamiya MS 23 (*olim* London, Sion College, MS Arc. L.40. 2/E), designated sigil 'S' in the textual scholarship.
-For description of the manuscript and its text, see @CorneliusTakamiyaMS232023 and @CorneliusProtestantElementsPiers2024, with references.
+For description of the manuscript and its text, see @CorneliusTakamiyaMS232023 and @CorneliusProtestantElementsPiers2025, with references.
 This document serves as a technical introduction to the transcription file and policies that inform it.
 
-The transcription agrees approximately with *TEI P5 Guidelines for Electronic Text Encoding and Interchange* and the conventions of published documentary editions of *The Piers Plowman Electronic Archive* (*PPEA*).
-See @TEIConsortiumTEIP5Guidelines2024 and @DugganPiersPlowmanElectronic2014a].
-These authorities differ in detail; the present documentation does not attempt to reconcile them.
-Readers are referred to *TEI P5 Guidelines* for additional commentary on individual elements.
+The transcription agrees approximately with *TEI P5 Guidelines* [-@TEIConsortiumTEIP5Guidelines2024] and the conventions of published documentary editions of *The Piers Plowman Electronic Archive* \(*PPEA*\) [@DugganPiersPlowmanElectronic2014a] and validates against `takamiya-23.rnc`, a compact RELAX NG schema written specially for this project.
 
-The transcription differs from published *PPEA* editions in presenting a bare diplomatic transcription, without a textual apparatus or editorial notes of any kind.
+The transcription differs from published *PPEA* editions in presenting a bare diplomatic transcription, without textual apparatus or editorial notes of any kind.
 It also differs from published editions in not being peer reviewed.
 For bibliographical and licensing details, see [Licensing and Citation].
 
@@ -73,7 +70,6 @@ This attribute supplies a unique identifier for units of transcription.
 - `n_Bx` Cross-reference to the corresponding line or lines in @BurrowPiersPlowmanBversion2018.[^Bx]
 
 [^Bx]: An earlier version of @BurrowPiersPlowmanBversion2018 is available online at <https://piers.chass.ncsu.edu/texts/Bx>.
-The attribute `n_Bx` is a customized addition in this transcription of Takamiya 23, unsupported by *PPEA* validation schemas.
 
 Accordingly, the first line of *Piers Plowman* as transmitted by the Takamiya manuscript is encoded as
 
@@ -134,7 +130,7 @@ Instead, we record the punctuation-marks entered by the scribe around the textua
 Marks of punctuation are transcribed with the nearest corresponding ASCII character:
 
 - full stop (`.`) for *punctus*
-- slash (`/`) for straight sloping *virgula suspensiva*
+- forward slash (`/`) for straight sloping *virgula suspensiva*
 - comma (`,`) for smaller semicircular *virgula suspensiva*
 - question mark (`?`) for question mark or *punctus percontativus*[^percontativus]
 
@@ -369,9 +365,8 @@ For instance: *thaungell* and *tamende*.
 # Licensing and citation
 
 This documentation and the XML file `transcription-takamiya-23.xml` are released under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
-
 An adequate citation is:
 
-> Cornelius, Ian, J. Eric Ensley, and Paul A. Broyles, eds. 2024. *New Haven, Beinecke Library, Takamiya MS 23: A Provisional Machine-Readable Transcription of the "Piers Plowman" Text*. Version 0 [2024-10-07]. <https://github.com/icornelius/s-takamiya-23/>.
+> Cornelius, Ian and J. Eric Ensley, eds. (2024) 2026. *New Haven, Beinecke Library, Takamiya MS 23: A Provisional Machine-Readable Transcription of the "Piers Plowman" Text*. Version 0.2. Zenodo. <https://doi.org/10.5281/zenodo.13955351>
 
 # Bibliography
